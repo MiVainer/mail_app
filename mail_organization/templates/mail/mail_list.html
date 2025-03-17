@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Mail List</h1>
+<ul>
+    {% for mail in mails %}
+    <li>
+        <strong>{{ mail.sender }}</strong>: {{ mail.subject }} ({{ mail.timestamp }})
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
