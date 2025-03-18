@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'mail',
     'chat',
     'employees',
-    'crispy_forms',
     'channels',
 ]
 
@@ -82,6 +81,17 @@ WSGI_APPLICATION = 'mail_organization.wsgi.application'
 
 DATABASES = {
     'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+        'USER': 'miviner',
+        'PASSWORD': 'sms2851140',
+    }
+}
+
+
+'''
+DATABASES = {
+    'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'mail_organization',
         'USER': 'miviner',
@@ -90,7 +100,7 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-
+'''
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
